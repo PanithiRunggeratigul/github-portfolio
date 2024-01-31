@@ -60,7 +60,7 @@ nav {
     object-fit: cover;
   }
   ul.list, li.list {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     list-style: none;
   }
