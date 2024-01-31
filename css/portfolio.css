@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(173, 228, 196);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+.nav {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.current {
+  display: block;
+  color: white;
+  background-color: #887e7e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav:hover {
+  background-color: #ddd;
+  color: black;
+}
+  h1 {
+    color: black;
+  }
+  p {
+    color: black;
+  }
+  .video_container {
+    display: flex;
+    justify-content: center;
+  }
+  .project_vid {
+    margin: 20px;
+    width: 600px;
+  }
+  .small_projects {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .content {
+    padding: 10px;
+    border-style: solid;
+    border-color: rgb(34, 120, 70);
+    flex: 1;
+    margin: 0 10px;
+  }
+  .vids {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  ul.list, li.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
