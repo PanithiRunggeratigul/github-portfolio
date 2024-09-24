@@ -3,17 +3,26 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-nav {
+.navelement {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   background-color: #333;
-  padding: 10px;
 }
 .nav {
+  float: left;
+}
+
+.nav a {
   display: block;
   color: white;
-  text-align: center;
+  align-content: center;
   padding: 14px 16px;
   text-decoration: none;
+  height: 30px;
 }
+
 .current {
   display: block;
   color: white;
@@ -21,11 +30,23 @@ nav {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  height: 30px;
 }
 .nav:hover {
   background-color: #ddd;
   color: black;
 }
+
+.container {
+  background-color: rgb(125, 196, 155);
+  border-radius: 25px;
+  width: 60%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  margin-top: 10px;
+}
+
   h1 {
     color: black;
   }

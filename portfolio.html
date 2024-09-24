@@ -8,248 +8,325 @@
 	</head>
   <body>
     <nav class="navbar">
-      <a href = "index.html" target="_self" class="nav">Home</a>
-          <a href = "introduction.html" target="_self" class="nav">Introduction</a>
-          <a href = "portfolio.html" target="_self" class="current">Portfolio</a>
-          <a href = "contact.html" target="_self" class="nav">Contact Me</a>
-      </nav>
+      <ul class="navelement">
+        <li class="nav"><a href = "index.html" target="_self">Home</a></li>
+        <li class="nav"><a href = "introduction.html" target="_self">Introduction</a></li>
+        <li class="nav"><a href = "portfolio.html" target="_self" class="current">Portfolio</a></li>
+        <li class="nav" style="float:right"><a href = "contact.html" target="_self">Contact Me</a></li>
+      </ul>
+    </nav>
 
       <h1>
         Portfolio
       </h1>
-
-      <h2>
-        Term Projects
-      </h2>
-
-      <ul style="list-style-type:none;">  
-        <li>
-          Escapee <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
-          <div class="video_container">
-            <video controls class="project_vid">
-              <source src="videos/trailer-nosound.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <video controls class="project_vid">
-              <source src="videos/GamePresentation.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+      <div class="largeContainer">
+        <section class="leftSideContainer">
+          <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Project</button>
+          <button onclick="showPage('page2', this)" class="page-button button-2 inactive-btn">Game Jam</button>
+          <div class="leftContainer">
+            <div class="projectContent page active" id="page1">
+              <h2>
+                Term Projects
+              </h2>
+                <h3>Escapee</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
+                  <div id="video1" class="video-container active">
+                    <video controls class="project-vid">
+                      <source src="videos/trailer-nosound.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div id="video2" class="video-container">
+                    <video controls class="project-vid">
+                      <source src="videos/GamePresentation.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="vidbuttonholder">
+                    <button onclick="showVideo('video1', this)" class="vid-button vidbutton-1 active-videobtn">1</button>
+                    <button onclick="showVideo('video2', this)" class="vid-button vidbutton-2 inactive-videobtn">2</button>
+                  </div>
+                      <p style="text-align:center;">3D game our group created with Unity. It is online game that player must run away from the bots until time out. While we must work on the real game development environment.</p>
+                    <h3>What I learned</h3>
+                        As a programmer, I learned about 3D game management and player controllers.
+                        How to make online game with Unity with <a href="https://www.photonengine.com/" target="_blank">Photon Engine</a>.
+                        How to use AI with <a href="https://docs.unity3d.com/ScriptReference/AI.NavMesh.html" target="_blank">NavMesh</a>.
+                    <h3>Challenges</h3>
+                    <ul>
+                        <li>Create a game in real game development environment: create <a href="https://pmc-2.gitbook.io/escapee/" target="_blank">game design document</a>, create paper prototype, ask for user opinion.</li>
+                        <li>Understanding important components of online game, ex. how to sync the object in the scene between players and object owner.</li>
+                        <li>Have a chance to ask for user experience.</li>
+                    </ul>
+            </div>
+            <div class="projectContent page" id="page2">       
+                <h2>
+                  Game Jam
+                </h2>
+                  <h3>Sonkran Mix</h3> <a href="https://itch.io/jam/thailand-summer-jam-2024/rate/2656108" target="_blank">itch.io</a>
+                  <div class="img-container">
+                    <img source src="others/img1.jpg" width="500" height="300" class="project_img">
+                    <img source src="others/img2.jpg" width="500" height="300" class="project_img">
+                  </div>
+                      <p style="text-align:center;">2D drag and drop bartender simulation game created with Unity. Player must serve the right drink to customer before the time ran out and they must manage their temperature and dizzy by serve the drink to themselves. My main role is game programmer. My tasks were managing customer and player.</p> 
+                    <h3>What I learned</h3>
+                        Team coordination with other programmers with GitHub
+                        Several data structures and logics such as queue and Unity Scriptable Object.
+                    <h3>Challenges</h3>
+                    <ul>
+                        <li>Coordinate with strangers.</li>
+                        <li>My first Game Jam experience.</li>
+                        <li>Short working time.</li>
+                    </ul>
+              </div>
           </div>
-          <ul>
-            <li>
-              3D game our group created with Unity. It is online game that player must run away from the bots until time out. While we must work on the real game development environment.
-            </li>
-            <h3>What I learned</h3>
-            <ul>
-              <li>
-                As a programmer, I learned about 3D game management and player controllers.
-              </li>
-              <li>
-                How to make online game with Unity with <a href="https://www.photonengine.com/" target="_blank">Photon Engine</a>.
-              </li>
-              <li>
-                How to use AI with <a href="https://docs.unity3d.com/ScriptReference/AI.NavMesh.html" target="_blank">NavMesh</a>.
-              </li>
-            </ul>
-            <h3>Challenges</h3>
-            <ul>
-              <li>
-                Create a game in real game development environment: create <a href="https://pmc-2.gitbook.io/escapee/" target="_blank">game design document</a>, create paper prototype, ask for user opinion.
-              </li>
-              <li>
-                Understanding important components of online game, ex. how to sync the object in the scene between players and object owner.
-              </li>
-              <li>
-                Have a chance to ask for user experience.
-              </li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
+          <script>
+        function showPage(pageId, button) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
 
-      <h2>
-        Game Jam
-      </h2>
+            document.querySelectorAll('.page-button').forEach(btn => {
+                btn.classList.remove('active-btn');
+                btn.classList.add('inactive-btn');
+            });
 
-      <ul style="list-style-type:none;">  
-        <li>
-          Sonkran Mix <a href="https://itch.io/jam/thailand-summer-jam-2024/rate/2656108" target="_blank">itch.io</a>
-          <div class="video_container">
-            <img source src="others/img1.jpg" width="500" height="300" class="project_vid">
-            <img source src="others/img2.jpg" width="500" height="300" class="project_vid">
+            button.classList.remove('inactive-btn');
+            button.classList.add('active-btn');
+        }
+
+        function showVideo(videoId, button) {
+            document.querySelectorAll('.video-container').forEach(videoContainer => {
+                videoContainer.classList.remove('active');
+                videoContainer.querySelector('video').pause();
+                videoContainer.querySelector('video').currentTime = 0; 
+            });
+
+            document.getElementById(videoId).classList.add('active');
+
+            document.querySelectorAll('.vid-button').forEach(btn => {
+                btn.classList.remove('active-videobtn');
+                btn.classList.add('inactive-videobtn');
+            });
+
+            button.classList.remove('inactive-videobtn');
+            button.classList.add('active-videobtn');
+        }
+        </script>
+        </section>
+  
+        <section class="rightSideContainer">
+          <div class="subpagebuttoncontainer">
+            <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">1</button>
+            <button onclick="showSubPage('subpage2', this)" class="subpage-button button-2 inactive-subbtn">2</button>
+            <button onclick="showSubPage('subpage3', this)" class="subpage-button button-3 inactive-subbtn">3</button> 
           </div>
-          <ul>
-            <li>
-              2D drag and drop bartender simulation game created with Unity. Player must serve the right drink to customer before the time ran out and they must manage their temperature and dizzy by serve the drink to themselves. My main role is game programmer. My tasks were managing customer and player. 
-            </li>
-            <h3>What I learned</h3>
-            <ul>
-              <li>
-                Team coordination with other programmers with GitHub
-              </li>
-              <li>
-                Several data structures and logics such as queue and Unity Scriptable Object.
+          <div class="rightTopContainer">
+            <div class="subProject subpage active" id="subpage1">
+              <h2>
+                Recent Projects
+              </h2>
+              <div id="recentproject1" class="recentproject-container active">
+                  <h3>Master Mind</h3>
+                  <a href="https://github.com/PanithiRunggeratigul/Master-Mind" target="_blank">GitHub</a>
+                  <video controls class="vids"><source src="videos/mastermind.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      I created basic game with UI. Player need to guess the numbers and the positions.
+                    </li>
+                    <h3 class="list">What I learned</h3>
+                    <ul style="list-style-type:none;" class="list">
+                      <li class="list">
+                        UI management
+                      </li>
+                      <li class="list">
+                        Event System
+                      </li>
+                    </ul>
+                    <h3 class="list">Challenges</h3>
+                    <ul style="list-style-type:none;" class="list">
+                      <li class="list">
+                        Learn to optimize the code without update
+                      </li>
+                    </ul>
+              </div>
+              <div id="recentproject2" class="recentproject-container">
+                  <h3>Slide Puzzle</h3>
+                  <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
+                  <video controls class="vids">
+                    <source src="videos/slide puzzle.mkv" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      I created 3D slide puzzle game.
+                    </li>
+                    <h3 class="list">What I learned</h3>
+                    <ul style="list-style-type:none;" class="list">
+                      <li class="list">
+                        Responsive UI
+                      </li>
+                      <li class="list">
+                        Design pattern and principle
+                      </li>
+                    </ul>
+                    <h3 class="list">Challenges</h3>
+                    <ul style="list-style-type:none;" class="list">
+                      <li class="list">
+                        Tried to follow the specific design principle (SOLID)
+                      </li>
+                    </ul>
+                  </ul>
+              </div>
+              <div class="subprojectbuttonholder">
+                <button onclick="changeSubProject('recentproject1', this)" class="recentpage-button recentpagebutton-1 active-recentpagebtn">1</button>
+                <button onclick="changeSubProject('recentproject2', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">2</button>
+              </div>
+          </div>
+          <div class="subProject subpage inactive" id="subpage2">
+            <h2>
+              For Study / In Progress
+            </h2>
+                <h3>My Game</h3>
+                <a href="https://github.com/PanithiRunggeratigul/mygame-showcase" target="_blank">GitHub</a>
+                <video controls class="vids">
+                  <source src="videos/my game.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <ul style="list-style-type:none;" class="list">
+                  <li class="list">
+                    First time I used Unity. I created basic player controller for 2D game.
+                  </li>
+                  <h3 class="list">What I learned</h3>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      2D game management, player controllers, and basics Unity workspace.
+                    </li>
+                    <li class="list">
+                      How to create and import my own assets.
+                    </li>
+                  </ul>
+                  <h3 class="list">Challenges</h3>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      Learned how to use Unity for the first time.
+                    </li>
+                  </ul>
+                </ul>
               </li>
             </ul>
-            <h3>Challenges</h3>
-            <ul>
-              <li>
-                Coordinate with strangers.
+          </div>
+          <div class="subProject subpage inactive" id="subpage3">
+            <h2>
+              Small Projects / Other
+            </h2>
+            <div id="smallproject1" class="smallproject-container active">
+                <h3>Jumping Game p5.js</h3>
+                <a href="https://github.com/PanithiRunggeratigul/Jumping-Game-p5.js" target="_blank">GitHub</a>
+                <video controls class="vids">
+                  <source src="videos/play_test.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <ul style="list-style-type:none;" class="list">
+                  <li class="list">
+                    I created rip-off Google's dinosaur game with p5.js
+                  </li>
+                  <h3 class="list">What I learned</h3>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      How to create a game with p5.js.
+                    </li>
+                  </ul class="list">
+                  <h3 class="list">Challenges</h3>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      Applied differnt game logics from Unity projects to this game, ex. jumping and collision.
+                    </li>
+                  </ul>
+                </ul>
               </li>
-              <li>
-                My first Game Jam experience.
+            </div>
+            <div id="smallproject2" class="smallproject-container">
+                <h3>Flappy Bird Meta Spark Game</h3>
+                <video controls class="vids">
+                  <source src="videos/Flappy Bird.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <ul style="list-style-type:none;" class="list">
+                  <li class="list">
+                    Get to know the AR and our task is to modify the some elements in the tutorial: <a href="https://www.youtube.com/watch?v=wvjGxsBsP-c&ab_channel=DJSCREATES" target="_blank">Video Tutorial</a>
+                  </li>
+                  <h3 class="list">What I learned</h3>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      How to create a game/filter with Meta Spark Studio
+                    </li>
+                  </ul>
+                  <h3 class="list">Challenges</h3>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      Used visual programming on how to manage the output without scripting.
+                    </li>
+                  </ul>
+                </ul>
               </li>
-              <li>
-                Short working time.
-              </li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
+            </div>
+            <div class="smallprojectbuttonholder">
+              <button onclick="changeSmallProject('smallproject1', this)" class="smallrecentpage-button smallrecentpagebutton-1 active-smallrecentpagebtn">1</button>
+              <button onclick="changeSmallProject('smallproject2', this)" class="smallrecentpage-button smallrecentpagebutton-2 inactive-smallrecentpagebtn">2</button>
+            </div>
+            </div>
+          </div>
+          <script>
+            function showSubPage(pageId, button) {
+            document.querySelectorAll('.subpage').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
 
-      <h2>
-        Recent Projects
-      </h2>
-      <ul style="list-style-type:none;" class="small_projects">
-        <li class="content">
-          Master Mind
-          <video controls class="vids">
-            <source src="videos/mastermind.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <ul style="list-style-type:none;" class="list">
-            <li class="list">
-              I created basic game with UI. Player need to guess the numbers and the positions.
-            </li>
-            <h3 class="list">What I learned</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                UI management
-              </li>
-              <li class="list">
-                Event System
-              </li>
-            </ul>
-            <h3 class="list">Challenges</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                Learn to optimize the code without update
-              </li>
-            </ul>
-          </ul>
-          <a href="https://github.com/PanithiRunggeratigul/Master-Mind" target="_blank">GitHub</a>
-        </li>
-        <li class="content">
-          Slide Puzzle
-          <video controls class="vids">
-            <source src="videos/slide puzzle.mkv" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <ul style="list-style-type:none;" class="list">
-            <li class="list">
-              I created 3D slide puzzle game.
-            </li>
-            <h3 class="list">What I learned</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                Responsive UI
-              </li>
-              <li class="list">
-                Design pattern and principle
-              </li>
-            </ul>
-            <h3 class="list">Challenges</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                Tried to follow the specific design principle (SOLID)
-              </li>
-            </ul>
-          </ul>
-          <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
-        </li>
-      </ul>
+            document.querySelectorAll('.subpage-button').forEach(btn => {
+                btn.classList.remove('active-subbtn');
+                btn.classList.add('inactive-subbtn');
+            });
 
-      <h2>
-        Small Projects
-      </h2>
-      <ul style="list-style-type:none;" class="small_projects">
-        <li class="content">
-          My Game
-          <video controls class="vids">
-            <source src="videos/my game.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <ul style="list-style-type:none;" class="list">
-            <li class="list">
-              First time I used Unity. I created basic player controller for 2D game.
-            </li>
-            <h3 class="list">What I learned</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                2D game management, player controllers, and basics Unity workspace.
-              </li>
-              <li class="list">
-                How to create and import my own assets.
-              </li>
-            </ul>
-            <h3 class="list">Challenges</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                Learned how to use Unity for the first time.
-              </li>
-            </ul>
-          </ul>
-          <a href="https://github.com/PanithiRunggeratigul/mygame-showcase" target="_blank">GitHub</a>
-        </li>
-        <li class="content">
-          Jumping Game p5.js
-          <video controls class="vids">
-            <source src="videos/play_test.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <ul style="list-style-type:none;" class="list">
-            <li class="list">
-              I created rip-off Google's dinosaur game with p5.js
-            </li>
-            <h3 class="list">What I learned</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                How to create a game with p5.js.
-              </li>
-            </ul class="list">
-            <h3 class="list">Challenges</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                Applied differnt game logics from Unity projects to this game, ex. jumping and collision.
-              </li>
-            </ul>
-          </ul>
-          <a href="https://github.com/PanithiRunggeratigul/Jumping-Game-p5.js" target="_blank">GitHub</a>
-        </li>
-        <li class="content">
-          Flappy Bird Meta Spark Game
-          <video controls class="vids">
-            <source src="videos/Flappy Bird.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <ul style="list-style-type:none;" class="list">
-            <li class="list">
-              Get to know the AR and our task is to modify the some elements in the tutorial: <a href="https://www.youtube.com/watch?v=wvjGxsBsP-c&ab_channel=DJSCREATES" target="_blank">Video Tutorial</a>
-            </li>
-            <h3 class="list">What I learned</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                How to create a game/filter with Meta Spark Studio
-              </li>
-            </ul>
-            <h3 class="list">Challenges</h3>
-            <ul style="list-style-type:none;" class="list">
-              <li class="list">
-                Used visual programming on how to manage the output without scripting.
-              </li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
+            button.classList.remove('inactive-subbtn');
+            button.classList.add('active-subbtn');
+        }
+
+        function changeSubProject(projId, button) {
+            document.querySelectorAll('.recentproject-container').forEach(recentProjectContainer => {
+              recentProjectContainer.classList.remove('active');
+            });
+
+            document.getElementById(projId).classList.add('active');
+
+            document.querySelectorAll('.recentpage-button').forEach(btn => {
+                btn.classList.remove('active-recentpagebtn');
+                btn.classList.add('inactive-recentpagebtn');
+            });
+
+            button.classList.remove('inactive-recentpagebtn');
+            button.classList.add('active-recentpagebtn');
+        }
+
+        function changeSmallProject(projId, button) {
+            document.querySelectorAll('.smallproject-container').forEach(smallProjectContainer => {
+              smallProjectContainer.classList.remove('active');
+            });
+
+            document.getElementById(projId).classList.add('active');
+
+            document.querySelectorAll('.smallrecentpage-button').forEach(btn => {
+                btn.classList.remove('active-smallrecentpagebtn');
+                btn.classList.add('inactive-smallrecentpagebtn');
+            });
+
+            button.classList.remove('inactive-smallrecentpagebtn');
+            button.classList.add('active-smallrecentpagebtn');
+        }
+          </script>
+        </section>
+      </div>
   </body>
 </html>
