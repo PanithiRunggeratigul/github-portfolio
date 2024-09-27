@@ -42,7 +42,7 @@ body {
 }
 .leftSideContainer {
   background-color: rgb(125, 196, 155);
-  border-radius: 0px 25px;
+  border-radius: 0px 0px 25px;
   width: 65%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -74,27 +74,7 @@ body {
   margin-top: 10px;
   height: auto;
 }
-.page-button {
-  border-radius: 25px 25px 0px 0px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  position: absolute;
-  top: -45px;
-  cursor: pointer;
-}
-.page-button.button-1 {
-  left: 0px;
-}
 
-.page-button.button-2 {
-  left: 150px;
-}
-.page-button.button-3 {
-  left: 290px;
-}
 .page-button.inactive-btn {
   background-color: rgb(110, 175, 137);
   color: black;
@@ -155,7 +135,7 @@ body {
 }
 .rightSideContainer {
   background-color: rgb(125, 196, 155);
-  border-radius: 0px 25px;
+  border-radius: 0px 0px 25px;
   width: 25%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -192,30 +172,49 @@ body {
 .subpage.active {
   display: block;
 }
-.subpagebuttoncontainer {
+.mainpagebuttoncontainer {
+  display: flex;
+  justify-content: flex-start; 
   position: relative;
-  height: 0;
+  height: 0; 
+}
+
+.page-button {
+  border-radius: 25px 25px 0px 0px;
+  border: none;
+  color: white;
+  padding: 22.5px clamp(10px, 5vw, 32px); 
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  top: -55px;
+  cursor: pointer;
+  flex: 1 1 150px; 
+  max-width: clamp(100px, 20vw, 300px); 
+  margin-right: 10px; 
+}
+
+
+.subpagebuttoncontainer {
+  display: flex;
+  justify-content: flex-start; 
+  position: relative;
+  height: 0; 
 }
 
 .subpage-button {
   border-radius: 25px 25px 0px 0px;
   border: none;
   color: white;
-  padding: 15px 10%;
+  padding: 22.5px clamp(10px, 5vw, 32px); 
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
-  position: absolute;
+  position: relative;
   top: -55px;
-  flex: 1;
-}
-
-.subpage-button.button-1 {
-  left: 0;
-}
-
-.subpage-button.button-2 {
-  left: 30%;
+  cursor: pointer;
+  flex: 1 1 150px; 
+  max-width: clamp(100px, 20vw, 300px); 
+  margin-right: 10px; 
 }
 
 .subpage-button.inactive-subbtn {

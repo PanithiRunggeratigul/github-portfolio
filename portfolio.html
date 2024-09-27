@@ -21,9 +21,11 @@
       </h1>
       <div class="largeContainer">
         <section class="leftSideContainer">
-          <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Project</button>
-          <button onclick="showPage('page2', this)" class="page-button button-2 inactive-btn">Game Jam</button>
-          <button onclick="showPage('page3', this)" class="page-button button-3 inactive-btn">In Progress / Study</button>
+          <div class="mainpagebuttoncontainer">
+            <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Project</button>
+            <button onclick="showPage('page2', this)" class="page-button button-2 inactive-btn">Game Jam</button>
+            <button onclick="showPage('page3', this)" class="page-button button-3 inactive-btn">In Progress / Study</button>
+          </div>
           <div class="leftContainer">
             <div class="projectContent page active" id="page1">
               <h2>
@@ -82,7 +84,7 @@
                 <h2>
                   In Progress / Study
                 </h2>
-                  <h3>State Machine</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a>
+                  <h3>State Machine</h3> <a href="https://github.com/MiccPR/3D-Combo-Test" target="_blank">GitHub</a>
                   <div id="video1" class="video-container active">
                     <video controls class="project-vid">
                       <source src="videos/Statemachine.mp4" type="video/mp4">
