@@ -92,6 +92,9 @@ body {
 .page-button.button-2 {
   left: 150px;
 }
+.page-button.button-3 {
+  left: 290px;
+}
 .page-button.inactive-btn {
   background-color: rgb(110, 175, 137);
   color: black;
@@ -212,11 +215,7 @@ body {
 }
 
 .subpage-button.button-2 {
-  left: 27.5%;
-}
-
-.subpage-button.button-3 {
-  left: 55%;
+  left: 30%;
 }
 
 .subpage-button.inactive-subbtn {

@@ -23,6 +23,7 @@
         <section class="leftSideContainer">
           <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Project</button>
           <button onclick="showPage('page2', this)" class="page-button button-2 inactive-btn">Game Jam</button>
+          <button onclick="showPage('page3', this)" class="page-button button-3 inactive-btn">In Progress / Study</button>
           <div class="leftContainer">
             <div class="projectContent page active" id="page1">
               <h2>
@@ -57,7 +58,7 @@
                         <li>Have a chance to ask for user experience.</li>
                     </ul>
             </div>
-            <div class="projectContent page" id="page2">       
+              <div class="projectContent page" id="page2">       
                 <h2>
                   Game Jam
                 </h2>
@@ -75,6 +76,28 @@
                         <li>Coordinate with strangers.</li>
                         <li>My first Game Jam experience.</li>
                         <li>Short working time.</li>
+                    </ul>
+              </div>
+              <div class="projectContent page" id="page3">       
+                <h2>
+                  In Progress / Study
+                </h2>
+                  <h3>State Machine</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a>
+                  <div id="video1" class="video-container active">
+                    <video controls class="project-vid">
+                      <source src="videos/Statemachine.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                      <p style="text-align:center;">3D third person view controller using State Machine to operate. Currently, it has idle, run, stop, and attack states.</p> 
+                    <h3>What I learned</h3>
+                        State Machine to control between each state.
+                        Animator Override Controller for changing different animations.
+                        Collecting inputs using Unity Input System.
+                    <h3>Future</h3>
+                    <ul>
+                        <li>This project objectives is to make a controller similarly to Genshin Impact.</li>
+                        <li>I would like to make a attack sequence for the character.</li>
                     </ul>
               </div>
           </div>
@@ -116,9 +139,8 @@
   
         <section class="rightSideContainer">
           <div class="subpagebuttoncontainer">
-            <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">1</button>
-            <button onclick="showSubPage('subpage2', this)" class="subpage-button button-2 inactive-subbtn">2</button>
-            <button onclick="showSubPage('subpage3', this)" class="subpage-button button-3 inactive-subbtn">3</button> 
+            <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">Recent</button>
+            <button onclick="showSubPage('subpage2', this)" class="subpage-button button-2 inactive-subbtn">Other</button>
           </div>
           <div class="rightTopContainer">
             <div class="subProject subpage active" id="subpage1">
@@ -155,7 +177,7 @@
                   <h3>Slide Puzzle</h3>
                   <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
                   <video controls class="vids">
-                    <source src="videos/slide puzzle.mkv" type="video/mp4">
+                    <source src="videos/slide puzzle.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                   <ul style="list-style-type:none;" class="list">
@@ -185,39 +207,6 @@
               </div>
           </div>
           <div class="subProject subpage inactive" id="subpage2">
-            <h2>
-              For Study / In Progress
-            </h2>
-                <h3>My Game</h3>
-                <a href="https://github.com/PanithiRunggeratigul/mygame-showcase" target="_blank">GitHub</a>
-                <video controls class="vids">
-                  <source src="videos/my game.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <ul style="list-style-type:none;" class="list">
-                  <li class="list">
-                    First time I used Unity. I created basic player controller for 2D game.
-                  </li>
-                  <h3 class="list">What I learned</h3>
-                  <ul style="list-style-type:none;" class="list">
-                    <li class="list">
-                      2D game management, player controllers, and basics Unity workspace.
-                    </li>
-                    <li class="list">
-                      How to create and import my own assets.
-                    </li>
-                  </ul>
-                  <h3 class="list">Challenges</h3>
-                  <ul style="list-style-type:none;" class="list">
-                    <li class="list">
-                      Learned how to use Unity for the first time.
-                    </li>
-                  </ul>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="subProject subpage inactive" id="subpage3">
             <h2>
               Small Projects / Other
             </h2>
