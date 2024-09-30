@@ -74,6 +74,19 @@ body {
   margin-top: 10px;
   height: auto;
 }
+.video3-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.video3-container.active {
+  display: flex;
+}
+.project3-vid {
+  width: 50%;
+  margin-top: 10px;
+  height: auto;
+}
 
 .page-button.inactive-btn {
   background-color: rgb(110, 175, 137);
