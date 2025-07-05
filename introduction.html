@@ -24,13 +24,64 @@
       <p>
         I am <b>Programmer</b> and <b>Game Developer</b>.
       </p>
+    </div>
 
-      <p>
-        I am currently studying at Mahidol University<br>
-        Bachelor of Science in Information and Communication Technology<br>
-        Faculty of Information and Communication Technology<br>
-        Major Track: Multimedia Systems
-      </p>
+    <div class="journey-container">
+      <h3>
+        My Journey
+      </h3>
+        <div class="p-wrapper">
+          <div class="line"></div>
+          <script>
+            function updateVerticalLine() {
+              const items = document.querySelectorAll('.item');
+              const line = document.querySelector('.line');
+          
+              if (items.length >= 2) {
+                const first = items[0].getBoundingClientRect();
+                const last = items[items.length - 1].getBoundingClientRect();
+          
+                const containerTop = document.querySelector('.p-wrapper').getBoundingClientRect().top;
+          
+                const startY = first.top + first.height / 2 - containerTop;
+                const endY = last.top + last.height / 2 - containerTop;
+          
+                line.style.top = `${startY}px`;
+                line.style.height = `${endY - startY}px`;
+              }
+            }
+            
+            window.addEventListener("load", updateVerticalLine);
+            window.addEventListener("resize", updateVerticalLine);
+          </script>
+          
+          <div class="item">
+            <div class="bullet-line">
+              <div class="circle"></div>
+              <div class="horizontal-line"></div>
+            </div>
+          <p>
+            2020 - 2024<br>
+            Graduated from Mahidol University<br>
+            Bachelor of Science in Information and Communication Technology<br>
+            Faculty of Information and Communication Technology<br>
+            Major Track: Multimedia Systems
+          </p>
+        </div>
+
+          <div class="item">
+            <div class="bullet-line">
+              <div class="circle"></div>
+              <div class="horizontal-line"></div>
+            </div>
+          <p>
+            Jan 2025 - June 2025<br>
+            6-months Paid Internship at <a href = "https://vondergames.com/" target="_blank">Vonder Games Studio</a><br>
+            In <a href = "https://store.steampowered.com/app/2195450/Aether_Wizard_Life/" target="_blank">Aether Wizard Life Project</a><br>
+            As Game Developer
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

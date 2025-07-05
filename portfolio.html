@@ -33,13 +33,13 @@
               </h2>
                 <h3>Escapee</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
                   <div id="video1" class="video-container active">
-                    <video controls class="project-vid">
+                    <video class="project-vid" autoplay="autoplay" controls muted>
                       <source src="videos/trailer-nosound.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   <div id="video2" class="video-container">
-                    <video controls class="project-vid">
+                    <video class="project-vid" autoplay="autoplay" controls muted>
                       <source src="videos/GamePresentation.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
@@ -86,7 +86,7 @@
                 </h2>
                   <h3>State Machine</h3> <a href="https://github.com/MiccPR/3D-Combo-Test" target="_blank">GitHub</a>
                   <div id="video1" class="video3-container active">
-                    <video controls class="project3-vid">
+                    <video class="project3-vid" autoplay="autoplay" controls muted>
                       <source src="videos/Statemachine.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
@@ -122,8 +122,6 @@
         function showVideo(videoId, button) {
             document.querySelectorAll('.video-container').forEach(videoContainer => {
                 videoContainer.classList.remove('active');
-                videoContainer.querySelector('video').pause();
-                videoContainer.querySelector('video').currentTime = 0; 
             });
 
             document.getElementById(videoId).classList.add('active');
@@ -152,7 +150,7 @@
               <div id="recentproject1" class="recentproject-container active">
                   <h3>Master Mind</h3>
                   <a href="https://github.com/PanithiRunggeratigul/Master-Mind" target="_blank">GitHub</a>
-                  <video controls class="vids"><source src="videos/mastermind.mp4" type="video/mp4">
+                  <video class="vids" autoplay="autoplay" controls muted><source src="videos/mastermind.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                   <ul style="list-style-type:none;" class="list">
@@ -178,7 +176,7 @@
               <div id="recentproject2" class="recentproject-container">
                   <h3>Slide Puzzle</h3>
                   <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
-                  <video controls class="vids">
+                  <video class="vids" autoplay="autoplay" controls muted>
                     <source src="videos/slide puzzle.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
@@ -215,7 +213,7 @@
             <div id="smallproject1" class="smallproject-container active">
                 <h3>Jumping Game p5.js</h3>
                 <a href="https://github.com/PanithiRunggeratigul/Jumping-Game-p5.js" target="_blank">GitHub</a>
-                <video controls class="vids">
+                <video class="vids" autoplay="autoplay" controls muted>
                   <source src="videos/play_test.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -240,7 +238,7 @@
             </div>
             <div id="smallproject2" class="smallproject-container">
                 <h3>Flappy Bird Meta Spark Game</h3>
-                <video controls class="vids">
+                <video class="vids" autoplay="autoplay" controls muted>
                   <source src="videos/Flappy Bird.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
