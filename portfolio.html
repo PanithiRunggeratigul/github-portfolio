@@ -139,15 +139,44 @@
   
         <section class="rightSideContainer">
           <div class="subpagebuttoncontainer">
-            <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">Recent</button>
+            <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">Past Projects</button>
             <button onclick="showSubPage('subpage2', this)" class="subpage-button button-2 inactive-subbtn">Other</button>
           </div>
           <div class="rightTopContainer">
             <div class="subProject subpage active" id="subpage1">
               <h2>
-                Recent Projects
+                Past Projects
               </h2>
               <div id="recentproject1" class="recentproject-container active">
+                  <h3>Aether Wizard Life by Vonder Games Studio</h3>
+                  <a href="https://vondergames.com/" target="_blank">Website</a>
+                  <video class="vids" autoplay="autoplay" controls muted><source src="videos/aether.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      Had a chance to contribute in the Aether Wizard Life Project as Unity game developer intern at Vonder Games Studio.
+                    </li>
+                    <h3 class="list">What I learned</h3>
+                    <ul style="list-style-type:none;" class="list">
+                      <li class="list">
+                        Unity Tips and Tools: Debugging, Unity Input System, Unitask, DoTween, Cinemachine, Timeline, and Spine Animation
+                      </li>
+                      <li class="list">
+                        Game data management: Import Google Sheet to Unity, JSON Reader
+                      </li>
+                    </ul>
+                    <h3 class="list">Challenges</h3>
+                    <ul style="list-style-type:none;" class="list">
+                      <li class="list">
+                        Learned in the company environment under senior developer to debug and add new features to the game.
+                      </li>
+                      <li class="list">
+                        Cooperate with other teams: tester and artist.
+                      </li>
+                    </ul>
+              </div>
+              <div id="recentproject2" class="recentproject-container">
                   <h3>Master Mind</h3>
                   <a href="https://github.com/PanithiRunggeratigul/Master-Mind" target="_blank">GitHub</a>
                   <video class="vids" autoplay="autoplay" controls muted><source src="videos/mastermind.mp4" type="video/mp4">
@@ -160,20 +189,20 @@
                     <h3 class="list">What I learned</h3>
                     <ul style="list-style-type:none;" class="list">
                       <li class="list">
-                        UI management
+                        UI management: TMP, Button Component, and Grid layout 
                       </li>
                       <li class="list">
-                        Event System
+                        Unity Event System
                       </li>
                     </ul>
                     <h3 class="list">Challenges</h3>
                     <ul style="list-style-type:none;" class="list">
                       <li class="list">
-                        Learn to optimize the code without update
+                        Learned to optimize the code to handle gameplay with Unity Event System.
                       </li>
                     </ul>
               </div>
-              <div id="recentproject2" class="recentproject-container">
+              <div id="recentproject3" class="recentproject-container">
                   <h3>Slide Puzzle</h3>
                   <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
                   <video class="vids" autoplay="autoplay" controls muted>
@@ -196,7 +225,7 @@
                     <h3 class="list">Challenges</h3>
                     <ul style="list-style-type:none;" class="list">
                       <li class="list">
-                        Tried to follow the specific design principle (SOLID)
+                        Learned various design principle and design pattern, then adapted to the project such as: SOLID principle and Observer pattern.
                       </li>
                     </ul>
                   </ul>
@@ -204,6 +233,7 @@
               <div class="subprojectbuttonholder">
                 <button onclick="changeSubProject('recentproject1', this)" class="recentpage-button recentpagebutton-1 active-recentpagebtn">1</button>
                 <button onclick="changeSubProject('recentproject2', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">2</button>
+                <button onclick="changeSubProject('recentproject3', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">3</button>
               </div>
           </div>
           <div class="subProject subpage inactive" id="subpage2">
