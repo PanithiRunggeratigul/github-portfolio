@@ -155,6 +155,16 @@ body {
   margin-top: 10px;
   position: relative;
 }
+.termprojectimage-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.termprojectimage-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .recentproject-container {
   display: none;
   justify-content: center;
@@ -245,9 +255,14 @@ body {
   align-items: center;
 }
 .project_img {
-  width: 40%;
-  margin: 10px;
+  width: 50%;
+  margin-top: 10px;
   height: auto;
+}
+.project_img2 {
+  width: 70%;
+  margin: 10px;
+  height: auto; 
 }
 .subprojectbuttonholder {
   display: flex;
@@ -255,7 +270,12 @@ body {
   position: relative;
   top: -50;
 }
-
+.projectimagebuttonholder {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -50;
+}
 .recentpage-button {
   border: none;
   border-radius: 20%;
@@ -280,6 +300,55 @@ body {
   display: inline-block;
   position: relative;
   left: 0px;
+}
+.recentpagebutton-3 {
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(130, 136, 133);
+  border: none;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+}
+
+.recentimage-button {
+  border: none;
+  border-radius: 20%;
+  padding: 3.5px 12%;
+  cursor: pointer;
+}
+.recentimage-button:hover {
+  background-color: rgb(191, 199, 195);
+}
+.recentimagebutton-1 {
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(130, 136, 133);
+  border: none;
+  display: inline-block;
+  position: relative;
+  right: 0px;
+}
+.recentimagebutton-2 {
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(130, 136, 133);
+  border: none;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+}
+.recentimagebutton-3 {
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(130, 136, 133);
+  border: none;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+}
+.active-recentimagebutton {
+  background-color: rgb(158, 160, 158);
+}
+
+.inactive-recentimagebutton {
+  background-color: rgb(192, 190, 190);
 }
 
 .active-recentpagebtn {

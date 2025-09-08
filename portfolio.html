@@ -22,7 +22,7 @@
       <div class="largeContainer">
         <section class="leftSideContainer">
           <div class="mainpagebuttoncontainer">
-            <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Project</button>
+            <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Projects</button>
             <button onclick="showPage('page2', this)" class="page-button button-2 inactive-btn">Game Jam</button>
             <button onclick="showPage('page3', this)" class="page-button button-3 inactive-btn">In Progress / Study</button>
           </div>
@@ -31,7 +31,8 @@
               <h2>
                 Term Projects
               </h2>
-                <h3>Escapee</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
+              <div>
+                <h3>Escapee Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
                   <div id="video1" class="video-container active">
                     <video class="project-vid" autoplay="autoplay" controls muted>
                       <source src="videos/trailer-nosound.mp4" type="video/mp4">
@@ -59,6 +60,20 @@
                         <li>Understanding important components of online game, ex. how to sync the object in the scene between players and object owner.</li>
                         <li>Have a chance to ask for user experience.</li>
                     </ul>
+                </div>
+                <br>
+                <div>
+                <h3>Movie Search Web Service Project</h3> <a href="https://github.com/PanithiRunggeratigul/pds-test" target="_blank">GitHub</a>
+                    <div id="img3" class="termprojectimage-container active"><img source src="others/img3.png" width="auto" height="400" class="project_img2"></div>
+                    <div id="img4" class="termprojectimage-container"><img source src="others/img4.png" width="500" height="400" class="project_img2"></div>
+                    <div id="img6" class="termprojectimage-container"><img source src="others/img6.png" width="500" height="400" class="project_img2"></div>
+                  <div class="subprojectbuttonholder">
+                    <button onclick="changeTermImage('img3', this)" class="recentimage-button recentimagebutton-1 active-recentimagebutton">1</button>
+                    <button onclick="changeTermImage('img4', this)" class="recentimage-button recentimagebutton-2 inactive-recentimagebutton">2</button>
+                    <button onclick="changeTermImage('img6', this)" class="recentimage-button recentimagebutton-3 inactive-recentimagebutton">3</button>
+                  </div>
+                      <p style="text-align:center;">Movie database web service using HTML/CSS and React for the frontend, Node.js for backend controlling IMDb API to display the search results, and SQL for user data storage for authentication system. Later on, the project was deployed to AWS Cloud.</p>
+                </div>
             </div>
               <div class="projectContent page" id="page2">       
                 <h2>
@@ -233,7 +248,7 @@
               <div class="subprojectbuttonholder">
                 <button onclick="changeSubProject('recentproject1', this)" class="recentpage-button recentpagebutton-1 active-recentpagebtn">1</button>
                 <button onclick="changeSubProject('recentproject2', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">2</button>
-                <button onclick="changeSubProject('recentproject3', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">3</button>
+                <button onclick="changeSubProject('recentproject3', this)" class="recentpage-button recentpagebutton-3 inactive-recentpagebtn">3</button>
               </div>
           </div>
           <div class="subProject subpage inactive" id="subpage2">
@@ -311,6 +326,22 @@
 
             button.classList.remove('inactive-subbtn');
             button.classList.add('active-subbtn');
+        }
+
+        function changeTermImage(projId, button) {
+            document.querySelectorAll('.termprojectimage-container').forEach(recentProjectContainer => {
+              recentProjectContainer.classList.remove('active');
+            });
+
+            document.getElementById(projId).classList.add('active');
+
+            document.querySelectorAll('.recentimage-button').forEach(btn => {
+                btn.classList.remove('active-recentimagebutton');
+                btn.classList.add('inactive-recentimagebutton');
+            });
+
+            button.classList.remove('inactive-recentimagebutton');
+            button.classList.add('active-recentimagebutton');
         }
 
         function changeSubProject(projId, button) {
