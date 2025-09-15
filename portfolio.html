@@ -151,11 +151,11 @@
             <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">Past Projects</button>
             <button onclick="showSubPage('subpage2', this)" class="subpage-button button-2 inactive-subbtn">Other</button>
           </div>
-          <div class="rightTopContainer">
             <div class="subProject subpage active" id="subpage1">
               <h2>
                 Past Projects
               </h2>
+              <div class="rightTopContainer">
               <div id="recentproject1" class="recentproject-container active">
                   <h3>Aether Wizard Life by Vonder Games Studio</h3>
                   <a href="https://vondergames.com/" target="_blank">Website</a>
@@ -244,7 +244,30 @@
                 <button onclick="changeSubProject('recentproject2', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">2</button>
                 <button onclick="changeSubProject('recentproject3', this)" class="recentpage-button recentpagebutton-3 inactive-recentpagebtn">3</button>
               </div>
-          </div>
+              </div>
+              <div class="rightBottomContainer">
+              <div id="bottomrecentproject1" class="bottomrecentproject-container active">
+                  <h3>Web Programming: API Food Searching</h3>
+                  <div id="img7" class="imgb"><img source src="others/img7.png" width="auto" height="400" class="imgb"></div>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      Studied how to request and fetch data from API and display the result to the website.
+                    </li>
+              </div>
+              <div id="bottomrecentproject2" class="bottomrecentproject-container">
+                  <h3>Node.js and SQL Test</h3>
+                  <div id="img8" class="imgb"><img source src="others/img8.png" width="auto" height="400" class="imgb"></div>
+                  <ul style="list-style-type:none;" class="list">
+                    <li class="list">
+                      Created simple website to test and run Node.js and connect with SQL database to perform CRUD operations.
+                    </li>
+              </div>
+              <div class="bottomsubprojectbuttonholder">
+                <button onclick="changeBottomSubProject('bottomrecentproject1', this)" class="bottomrecentpage-button bottomrecentpagebutton-1 active-bottomrecentpagebtn">1</button>
+                <button onclick="changeBottomSubProject('bottomrecentproject2', this)" class="bottomrecentpage-button bottomrecentpagebutton-2 inactive-bottomrecentpagebtn">2</button>
+              </div>
+              </div>
+            </div>
           <div class="subProject subpage inactive" id="subpage2">
             <h2>
               Small Projects / Other
@@ -306,6 +329,7 @@
             </div>
             </div>
           </div>
+
           <script>
             function showSubPage(pageId, button) {
             document.querySelectorAll('.subpage').forEach(page => {
@@ -352,6 +376,22 @@
 
             button.classList.remove('inactive-recentpagebtn');
             button.classList.add('active-recentpagebtn');
+        }
+
+        function changeBottomSubProject(projId, button) {
+            document.querySelectorAll('.bottomrecentproject-container').forEach(bottomRecentProjectContainer => {
+              bottomRecentProjectContainer.classList.remove('active');
+            });
+
+            document.getElementById(projId).classList.add('active');
+
+            document.querySelectorAll('.bottomrecentpage-button').forEach(btn => {
+                btn.classList.remove('active-bottomrecentpagebtn');
+                btn.classList.add('inactive-bottomrecentpagebtn');
+            });
+
+            button.classList.remove('inactive-bottomrecentpagebtn');
+            button.classList.add('active-bottomrecentpagebtn');
         }
 
         function changeSmallProject(projId, button) {

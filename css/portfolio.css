@@ -175,6 +175,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+.bottomrecentproject-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.bottomrecentproject-container.active {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
 .smallproject-container {
   display: none;
   justify-content: center;
@@ -270,6 +280,12 @@ body {
   position: relative;
   top: -50;
 }
+.bottomsubprojectbuttonholder {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -50;
+}
 .projectimagebuttonholder {
   display: flex;
   justify-content: center;
@@ -309,7 +325,31 @@ body {
   position: relative;
   left: 0px;
 }
-
+.bottomrecentpage-button {
+  border: none;
+  border-radius: 20%;
+  padding: 3.5px 12%;
+  cursor: pointer;
+}
+.bottomrecentpage-button:hover {
+  background-color: rgb(191, 199, 195);
+}
+.bottomrecentpagebutton-1 {
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(130, 136, 133);
+  border: none;
+  display: inline-block;
+  position: relative;
+  right: 0px;
+}
+.bottomrecentpagebutton-2 {
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(130, 136, 133);
+  border: none;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+}
 .recentimage-button {
   border: none;
   border-radius: 20%;
@@ -356,6 +396,13 @@ body {
 }
 
 .inactive-recentpagebtn {
+  background-color: rgb(192, 190, 190);
+}
+.active-bottomrecentpagebtn {
+  background-color: rgb(158, 160, 158);
+}
+
+.inactive-bottomrecentpagebtn {
   background-color: rgb(192, 190, 190);
 }
 .smallprojectbuttonholder {
@@ -423,6 +470,10 @@ body {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
+  }
+  .imgb {
+    width: 100%;
+    max-height: 400px;
   }
   ul.list, li.list {
     text-align: center;
