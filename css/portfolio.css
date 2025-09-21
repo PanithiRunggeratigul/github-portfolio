@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 .navelement {
   list-style-type: none;
   margin: 0;
@@ -13,7 +14,6 @@ body {
 .nav {
   float: left;
 }
-
 .nav a {
   display: block;
   color: white;
@@ -22,7 +22,6 @@ body {
   text-decoration: none;
   height: 30px;
 }
-
 .current {
   display: block;
   color: white;
@@ -36,6 +35,7 @@ body {
   background-color: #ddd;
   color: black;
 }
+
 .largeContainer {
   display: flex;
   justify-content: space-around;
@@ -50,11 +50,29 @@ body {
   position: relative;
 }
 
+.page-button {
+  border-radius: 25px 25px 0px 0px;
+  border: none;
+  background-color: rgb(110, 175, 137);
+  color: black;
+  padding: 22.5px clamp(10px, 5vw, 32px); 
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  top: -55px;
+  cursor: pointer;
+  flex: 1 1 150px; 
+  max-width: clamp(100px, 20vw, 300px); 
+  margin-right: 10px; 
+}
+.page-button.active {
+  background-color: rgb(125, 196, 155);
+  color: white;
+}
 .projectContent {
   margin: 10px;
   justify-content: space-around;
 }
-
 .page {
   display: none;
 }
@@ -87,57 +105,30 @@ body {
   margin-top: 10px;
   height: auto;
 }
-
-.page-button.inactive-btn {
-  background-color: rgb(110, 175, 137);
-  color: black;
-}
-
-.page-button.active-btn {
-  background-color: rgb(125, 196, 155);
-  color: white;
-}
-.vidbuttonholder {
+.contentbuttonholder {
   display: flex;
   justify-content: center;
   position: relative;
   top: -50;
 }
-
-.vid-button {
+.content-button {
   border: none;
   border-radius: 20%;
   padding: 3.5px 12%;
   cursor: pointer;
-}
-.vid-button:hover {
-  background-color: rgb(191, 199, 195);
-}
-.vidbutton-1 {
   margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
+  background-color: rgb(192, 190, 190);
   border: none;
   display: inline-block;
   position: relative;
   right: 0px;
 }
-.vidbutton-2 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
+.content-button:hover {
+  background-color: rgb(156, 156, 156);
 }
-
-.active-videobtn {
+.content-button.active {
   background-color: rgb(158, 160, 158);
 }
-
-.inactive-videobtn {
-  background-color: rgb(192, 190, 190);
-}
-
 .video-container {
   display: none;
   text-align: center;
@@ -222,22 +213,6 @@ body {
   height: 0; 
 }
 
-.page-button {
-  border-radius: 25px 25px 0px 0px;
-  border: none;
-  color: white;
-  padding: 22.5px clamp(10px, 5vw, 32px); 
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  top: -55px;
-  cursor: pointer;
-  flex: 1 1 150px; 
-  max-width: clamp(100px, 20vw, 300px); 
-  margin-right: 10px; 
-}
-
-
 .subpagebuttoncontainer {
   display: flex;
   justify-content: flex-start; 
@@ -245,30 +220,6 @@ body {
   height: 0; 
 }
 
-.subpage-button {
-  border-radius: 25px 25px 0px 0px;
-  border: none;
-  color: white;
-  padding: 22.5px clamp(10px, 5vw, 32px); 
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  top: -55px;
-  cursor: pointer;
-  flex: 1 1 150px; 
-  max-width: clamp(100px, 20vw, 300px); 
-  margin-right: 10px; 
-}
-
-.subpage-button.inactive-subbtn {
-  background-color: rgb(110, 175, 137);
-  color: black;
-}
-
-.subpage-button.active-subbtn {
-  background-color: rgb(125, 196, 155);
-  color: white;
-}
 .img-container{
   display: flex;
   justify-content: center;
@@ -312,153 +263,20 @@ body {
   border-radius: 20%;
   padding: 3.5px 12%;
   cursor: pointer;
+  margin: 0px 10px 10px 10px;
+  background-color: rgb(192, 190, 190);
+  border: none;
+  display: inline-block;
+  position: relative;
+  right: 0px;
 }
 .recentpage-button:hover {
   background-color: rgb(191, 199, 195);
 }
-.recentpagebutton-1 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  right: 0px;
-}
-.recentpagebutton-2 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.recentpagebutton-3 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.bottomrecentpage-button {
-  border: none;
-  border-radius: 20%;
-  padding: 3.5px 12%;
-  cursor: pointer;
-}
-.bottomrecentpage-button:hover {
-  background-color: rgb(191, 199, 195);
-}
-.bottomrecentpagebutton-1 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  right: 0px;
-}
-.bottomrecentpagebutton-2 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.recentimage-button {
-  border: none;
-  border-radius: 20%;
-  padding: 3.5px 12%;
-  cursor: pointer;
-}
-.recentimage-button:hover {
-  background-color: rgb(191, 199, 195);
-}
-.recentimagebutton-1 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  right: 0px;
-}
-.recentimagebutton-2 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.recentimagebutton-3 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.active-recentimagebutton {
-  background-color: rgb(158, 160, 158);
+.recentpage-button.active {
+  background-color: rgb(158, 160, 158);;
 }
 
-.inactive-recentimagebutton {
-  background-color: rgb(192, 190, 190);
-}
-.recentimage2-button {
-  border: none;
-  border-radius: 20%;
-  padding: 3.5px 12%;
-  cursor: pointer;
-}
-.recentimage2-button:hover {
-  background-color: rgb(191, 199, 195);
-}
-.recentimage2button-1 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  right: 0px;
-}
-.recentimage2button-2 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.recentimage2button-3 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-.active-recentimage2button {
-  background-color: rgb(158, 160, 158);
-}
-
-.inactive-recentimage2button {
-  background-color: rgb(192, 190, 190);
-}
-.active-recentpagebtn {
-  background-color: rgb(158, 160, 158);
-}
-
-.inactive-recentpagebtn {
-  background-color: rgb(192, 190, 190);
-}
-.active-bottomrecentpagebtn {
-  background-color: rgb(158, 160, 158);
-}
-
-.inactive-bottomrecentpagebtn {
-  background-color: rgb(192, 190, 190);
-}
 .smallprojectbuttonholder {
   display: flex;
   justify-content: center;
@@ -466,39 +284,6 @@ body {
   top: -50;
 }
 
-.smallrecentpage-button {
-  border: none;
-  border-radius: 20%;
-  padding: 3.5px 12%;
-  cursor: pointer;
-}
-.smallrecentpage-button:hover {
-  background-color: rgb(191, 199, 195);
-}
-.smallrecentpagebutton-1 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  right: 0px;
-}
-.smallrecentpagebutton-2 {
-  margin: 0px 10px 10px 10px;
-  background-color: rgb(130, 136, 133);
-  border: none;
-  display: inline-block;
-  position: relative;
-  left: 0px;
-}
-
-.active-smallrecentpagebtn {
-  background-color: rgb(158, 160, 158);
-}
-
-.inactive-smallrecentpagebtn {
-  background-color: rgb(192, 190, 190);
-}
   h1 {
     color: black;
     padding: 20px;

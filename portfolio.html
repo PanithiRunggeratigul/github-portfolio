@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+    <script src="portfolio.js"></script>
     <link rel="stylesheet" href="css/portfolio.css">
 		<title>
 			PanithiR-Portfolio
@@ -21,357 +22,234 @@
       </h1>
       <div class="largeContainer">
         <section class="leftSideContainer">
-          <div class="mainpagebuttoncontainer">
-            <button onclick="showPage('page1', this)" class="page-button button-1 active-btn">Term Projects</button>
-            <button onclick="showPage('page2', this)" class="page-button button-2 inactive-btn">Game Jam</button>
-            <button onclick="showPage('page3', this)" class="page-button button-3 inactive-btn">In Progress / Study</button>
-          </div>
-          <div class="leftContainer">
-            <div class="projectContent page active" id="page1">
-              <h2>
-                Term Projects
-              </h2>
-              <div>
-                <h3>Escapee Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
-                  <div id="video1" class="video-container active">
-                    <video class="project-vid" autoplay="autoplay" controls muted>
-                      <source src="videos/trailer-nosound.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+          <div class="projectPage">
+            <div class="mainpagebuttoncontainer">
+              <button onclick="changePage(this)" class="page-button active" data-target="page1"data-panel-class="page">Term Projects</button>
+              <button onclick="changePage(this)" class="page-button" data-target="page2"data-panel-class="page">Game Jam</button>
+              <button onclick="changePage(this)" class="page-button" data-target="page3"data-panel-class="page">In Progress / Study</button>
+            </div>
+            <div class="leftContainer">
+              <div class="projectContent page active" id="page1">
+                <h2>
+                  Term Projects
+                </h2>
+                <div class="content-group">
+                  <h3>Escapee Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
+                    <div id="video1" class="video-container active">
+                      <video class="project-vid" autoplay="autoplay" controls muted>
+                        <source src="videos/trailer-nosound.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div id="video2" class="video-container">
+                      <video class="project-vid" autoplay="autoplay" controls muted>
+                        <source src="videos/GamePresentation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="contentbuttonholder">
+                      <button onclick="changeElement(this)" class="content-button active" data-target="video1"data-panel-class="video-container"data-button-class="content-button1">1</button>
+                      <button onclick="changeElement(this)" class="content-button" data-target="video2"data-panel-class="video-container"data-button-class="content-button1">2</button>
+                    </div>
+                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Group Project | Game Programmer</h4>
+                      <ul>
+                        <li>3D Online game that player must run away from the bots until the time is out.</li>
+                        <li>The game server was run by <a href="https://www.photonengine.com/" target="_blank">Photon Engine</a>. I learned about master and client design while doing this project, and it allowed me to comprehend the 
+                          logic behind multiplayer environment while having limited resource to learn from.</li>
+                        <li>Developed in-game AI by using <a href="https://docs.unity3d.com/ScriptReference/AI.NavMesh.html" target="_blank">NavMesh</a>, that allow AI to see their path and players to capture.</li>
+                      </ul>
+                        </p>
                   </div>
-                  <div id="video2" class="video-container">
-                    <video class="project-vid" autoplay="autoplay" controls muted>
-                      <source src="videos/GamePresentation.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+                  <br>
+                  <div class="content-group">
+                  <h3>Movie Search Web Service Project</h3> <a href="https://github.com/PanithiRunggeratigul/pds-test" target="_blank">GitHub</a>
+                      <div id="imdb-1" class="termprojectimage-container active"><img source src="others/imdb-1.png" width="auto" height="400" class="project_img2"></div>
+                      <div id="imdb-2" class="termprojectimage-container"><img source src="others/imdb-2.png" width="500" height="400" class="project_img2"></div>
+                      <div id="imdb-3" class="termprojectimage-container"><img source src="others/imdb-3.png" width="500" height="400" class="project_img2"></div>
+                    <div class="subprojectbuttonholder">
+                      <button onclick="changeElement(this)" class="content-button active" data-target="imdb-1"data-panel-class="termprojectimage-container"data-button-class="content-button2">1</button>
+                      <button onclick="changeElement(this)" class="content-button" data-target="imdb-2"data-panel-class="termprojectimage-container"data-button-class="content-button2">2</button>
+                      <button onclick="changeElement(this)" class="content-button" data-target="imdb-3"data-panel-class="termprojectimage-container"data-button-class="content-button2">3</button>
+                    </div>
+                    <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: React, Node.js | Group Project | Programmer</h4>
+                      <ul>
+                        <li>Movie database web service using HTML/CSS and React for the frontend</li>
+                        <li>Displayed search result from IMDb API and SQL for user data authentication system using Node.js.</li>
+                        <li>Deployed the project to AWS Cloud and used GitHub for version control.</li>
+                      </ul>
                   </div>
-                  <div class="vidbuttonholder">
-                    <button onclick="showVideo('video1', this)" class="vid-button vidbutton-1 active-videobtn">1</button>
-                    <button onclick="showVideo('video2', this)" class="vid-button vidbutton-2 inactive-videobtn">2</button>
+                  <br>
+                  <div class="content-group">
+                  <h3>Online Chess Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/chess-project" target="_blank">GitHub</a>
+                      <div id="chess-1" class="termprojectimage2-container active"><img source src="others/chess-1.png" width="auto" height="400" class="project_img3"></div>
+                      <div id="chess-2" class="termprojectimage2-container"><img source src="others/chess-2.png" width="500" height="400" class="project_img3"></div>
+                      <div id="chess-3" class="termprojectimage2-container"><img source src="others/chess-3.png" width=50% height=auto style="margin: 10px;"></div>
+                    <div class="subprojectbuttonholder">
+                      <button onclick="changeElement(this)" class="content-button active"  data-target="chess-1"data-panel-class="termprojectimage2-container"data-button-class="content-button3">1</button>
+                      <button onclick="changeElement(this)" class="content-button"  data-target="chess-2"data-panel-class="termprojectimage2-container"data-button-class="content-button3">2</button>
+                      <button onclick="changeElement(this)" class="content-button"  data-target="chess-3"data-panel-class="termprojectimage2-container"data-button-class="content-button3">3</button>
+                    </div>
+                    <h4 style="padding-left: 10px;">Flutter Project | Language: Dart | Tools: Flutter, Firebase | Group Project | Programmer</h4>
+                      <ul>
+                        <li>Online Mobile Chess Game that used Figma to design and implemented using Dart and Flutter to create the game UI.</li>
+                        <li>Used Firebase to handle real-time online system, collecting player and match data.</li>
+                      </ul>
                   </div>
-                  <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Group Project | Game Programmer</h4>
-                    <ul>
-                      <li>3D Online game that player must run away from the bots until the time is out.</li>
-                      <li>The game server was run by <a href="https://www.photonengine.com/" target="_blank">Photon Engine</a>. I learned about master and client design while doing this project, and it allowed me to comprehend the 
-                        logic behind multiplayer environment while having limited resource to learn from.</li>
-                      <li>Developed in-game AI by using <a href="https://docs.unity3d.com/ScriptReference/AI.NavMesh.html" target="_blank">NavMesh</a>, that allow AI to see their path and players to capture.</li>
-                    </ul>
-                      </p>
+              </div>
+                <div class="projectContent page" id="page2">       
+                  <h2>
+                    Game Jam
+                  </h2>
+                    <h3>Sonkran Mix</h3> <a href="https://itch.io/jam/thailand-summer-jam-2024/rate/2656108" target="_blank">itch.io</a>
+                    <div class="img-container">
+                      <img source src="others/sonkran-1.jpg" width="500" height="300" class="project_img">
+                      <img source src="others/sonkran-2.jpg" width="500" height="300" class="project_img">
+                    </div>
+                      <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Group Project | Game Programmer</h4>
+                      <ul>
+                        <li>2D drag and drop bartender simulation game created with Unity. Player must serve the right drink to customer before the time ran out and they must manage their temperature and dizzy by serve the drink to themselves.</li>
+                        <li>Delivered managing customer and player system as game programmer.</li>
+                      </ul>
                 </div>
-                <br>
-                <div>
-                <h3>Movie Search Web Service Project</h3> <a href="https://github.com/PanithiRunggeratigul/pds-test" target="_blank">GitHub</a>
-                    <div id="img3" class="termprojectimage-container active"><img source src="others/img3.png" width="auto" height="400" class="project_img2"></div>
-                    <div id="img4" class="termprojectimage-container"><img source src="others/img4.png" width="500" height="400" class="project_img2"></div>
-                    <div id="img6" class="termprojectimage-container"><img source src="others/img6.png" width="500" height="400" class="project_img2"></div>
-                  <div class="subprojectbuttonholder">
-                    <button onclick="changeTermImage('img3', this)" class="recentimage-button recentimagebutton-1 active-recentimagebutton">1</button>
-                    <button onclick="changeTermImage('img4', this)" class="recentimage-button recentimagebutton-2 inactive-recentimagebutton">2</button>
-                    <button onclick="changeTermImage('img6', this)" class="recentimage-button recentimagebutton-3 inactive-recentimagebutton">3</button>
-                  </div>
-                  <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: React, Node.js | Group Project | Programmer</h4>
-                    <ul>
-                      <li>Movie database web service using HTML/CSS and React for the frontend</li>
-                      <li>Displayed search result from IMDb API and SQL for user data authentication system using Node.js.</li>
-                      <li>Deployed the project to AWS Cloud and used GitHub for version control.</li>
-                    </ul>
-                </div>
-                <br>
-                <div>
-                <h3>Online Chess Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/chess-project" target="_blank">GitHub</a>
-                    <div id="img11" class="termprojectimage2-container active"><img source src="others/img11.png" width="auto" height="400" class="project_img3"></div>
-                    <div id="img5" class="termprojectimage2-container"><img source src="others/img5.png" width="500" height="400" class="project_img3"></div>
-                    <div id="img9" class="termprojectimage2-container"><img source src="others/img9.png" width=50% height=auto style="margin: 10px;"></div>
-                  <div class="subprojectbuttonholder">
-                    <button onclick="changeTermImage2('img11', this)" class="recentimage2-button recentimage2button-1 active-recentimage2button">1</button>
-                    <button onclick="changeTermImage2('img5', this)" class="recentimage2-button recentimage2button-2 inactive-recentimage2button">2</button>
-                    <button onclick="changeTermImage2('img9', this)" class="recentimage2-button recentimage2button-3 inactive-recentimage2button">3</button>
-                  </div>
-                  <h4 style="padding-left: 10px;">Flutter Project | Language: Dart | Tools: Flutter, Firebase | Group Project | Programmer</h4>
-                    <ul>
-                      <li>Online Mobile Chess Game that used Figma to design and implemented using Dart and Flutter to create the game UI.</li>
-                      <li>Used Firebase to handle real-time online system, collecting player and match data.</li>
-                    </ul>
+                <div class="projectContent page" id="page3">       
+                  <h2>
+                    In Progress / Study
+                  </h2>
+                    <h3>State Machine</h3> <a href="https://github.com/MiccPR/3D-Combo-Test" target="_blank">GitHub</a>
+                    <div id="video1" class="video3-container active">
+                      <video class="project3-vid" autoplay="autoplay" controls muted>
+                        <source src="videos/Statemachine.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                      <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Solo Project | Game Programmer, Animator</h4>
+                      <ul>
+                        <li>Developed 3D third person view controller using State Machine to operate. Currently, it has idle, run, stop, and attack states.</li>
+                        <li>Studied and created a demo of character controller utilizing State Machine, Animator Override Controller, and Unity Input System.</li>
+                      </ul>
                 </div>
             </div>
-              <div class="projectContent page" id="page2">       
-                <h2>
-                  Game Jam
-                </h2>
-                  <h3>Sonkran Mix</h3> <a href="https://itch.io/jam/thailand-summer-jam-2024/rate/2656108" target="_blank">itch.io</a>
-                  <div class="img-container">
-                    <img source src="others/img1.jpg" width="500" height="300" class="project_img">
-                    <img source src="others/img2.jpg" width="500" height="300" class="project_img">
-                  </div>
-                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Group Project | Game Programmer</h4>
-                    <ul>
-                      <li>2D drag and drop bartender simulation game created with Unity. Player must serve the right drink to customer before the time ran out and they must manage their temperature and dizzy by serve the drink to themselves.</li>
-                      <li>Delivered managing customer and player system as game programmer.</li>
-                    </ul>
-              </div>
-              <div class="projectContent page" id="page3">       
-                <h2>
-                  In Progress / Study
-                </h2>
-                  <h3>State Machine</h3> <a href="https://github.com/MiccPR/3D-Combo-Test" target="_blank">GitHub</a>
-                  <div id="video1" class="video3-container active">
-                    <video class="project3-vid" autoplay="autoplay" controls muted>
-                      <source src="videos/Statemachine.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Single Project | Game Programmer, Animator</h4>
-                    <ul>
-                      <li>Developed 3D third person view controller using State Machine to operate. Currently, it has idle, run, stop, and attack states.</li>
-                      <li>Studied and created a demo of character controller utilizing State Machine, Animator Override Controller, and Unity Input System.</li>
-                    </ul>
-              </div>
           </div>
-          <script>
-        function showPage(pageId, button) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
-
-            document.querySelectorAll('.page-button').forEach(btn => {
-                btn.classList.remove('active-btn');
-                btn.classList.add('inactive-btn');
-            });
-
-            button.classList.remove('inactive-btn');
-            button.classList.add('active-btn');
-        }
-
-        function showVideo(videoId, button) {
-            document.querySelectorAll('.video-container').forEach(videoContainer => {
-                videoContainer.classList.remove('active');
-            });
-
-            document.getElementById(videoId).classList.add('active');
-
-            document.querySelectorAll('.vid-button').forEach(btn => {
-                btn.classList.remove('active-videobtn');
-                btn.classList.add('inactive-videobtn');
-            });
-
-            button.classList.remove('inactive-videobtn');
-            button.classList.add('active-videobtn');
-        }
-        </script>
         </section>
   
         <section class="rightSideContainer">
-          <div class="subpagebuttoncontainer">
-            <button onclick="showSubPage('subpage1', this)" class="subpage-button button-1 active-subbtn">Past Projects</button>
-            <button onclick="showSubPage('subpage2', this)" class="subpage-button button-2 inactive-subbtn">Other</button>
-          </div>
-            <div class="subProject subpage active" id="subpage1">
+          <div class="projectPage">
+            <div class="subpagebuttoncontainer">
+              <button onclick="changePage(this)" class="page-button active" data-target="subpage1"data-panel-class="subpage">Past Projects</button>
+              <button onclick="changePage(this)" class="page-button" data-target="subpage2"data-panel-class="subpage">Other</button>
+            </div>
+              <div class="subProject subpage active" id="subpage1">
+                <h2>
+                  Past Projects
+                </h2>
+                <div class="rightTopContainer content-group">
+                <div id="recentproject1" class="recentproject-container active">
+                    <h3>Aether Wizard Life by Vonder Games Studio</h3>
+                    <a href="https://vondergames.com/" target="_blank">Website</a>
+                    <video class="vids" autoplay="autoplay" controls muted><source src="videos/aether.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                      <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Internship | Game Programmer</h4>
+                      <ul>
+                        <li>Contributed in the Aether Wizard Life Project as Unity game developer intern at Vonder Games Studio.</li>
+                        <li>Learned additional Unity Tools such as Debugging, Unity Input System, Unitask, DoTween, Cinemachine, Timeline, and Spine Animation.</li>
+                        <li>Learned in the company environment under senior developer. Added and fixed more than 100 features in the game improving release stability.</li>
+                      </ul>
+                </div>
+                <div id="recentproject2" class="recentproject-container">
+                    <h3>Master Mind</h3>
+                    <a href="https://github.com/PanithiRunggeratigul/Master-Mind" target="_blank">GitHub</a>
+                    <video class="vids" autoplay="autoplay" controls muted><source src="videos/mastermind.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                      <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Solo Project | Game Programmer</h4>
+                      <ul>
+                        <li>Created basic game with UI. Player need to guess the numbers and the positions.</li>
+                        <li>Optimized the game using Unity Event System.</li>
+                      </ul>
+                </div>
+                <div id="recentproject3" class="recentproject-container">
+                    <h3>Slide Puzzle</h3>
+                    <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
+                    <video class="vids" autoplay="autoplay" controls muted>
+                      <source src="videos/slide puzzle.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                      <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Solo Project | Game Programmer</h4>
+                      <ul>
+                        <li>Created 3D slide puzzle game.</li>
+                        <li>Learned about Responsive UI, Design Pattern and Principle. Organized the code by applying SOLID Principle and Observer Pattern for better readability.</li>
+                      </ul>
+                </div>
+                <div class="subprojectbuttonholder">
+                  <button onclick="changeElement(this)" class="recentpage-button active" data-target="recentproject1"data-panel-class="recentproject-container"data-button-class="recentpage-button1">1</button>
+                  <button onclick="changeElement(this)" class="recentpage-button" data-target="recentproject2"data-panel-class="recentproject-container"data-button-class="recentpage-button1">2</button>
+                  <button onclick="changeElement(this)" class="recentpage-button" data-target="recentproject3"data-panel-class="recentproject-container"data-button-class="recentpage-button1">3</button>
+                </div>
+                </div>
+                <div class="rightBottomContainer content-group">
+                <div id="bottomrecentproject1" class="bottomrecentproject-container active">
+                    <h3>Web Programming: API Food Searching</h3>
+                    <div id="img7" class="imgb"><img source src="others/food-1.png" width="auto" height="400" class="imgb"></div>
+                      <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: Node.js | Solo Project | Programmer</h4>
+                      <ul>
+                        <li>Studied how to request and fetch data from Spoonacular API.</li>
+                        <li>Created a simple frontend and displayed the fetched data.</li>
+                      </ul>
+                </div>
+                <div id="bottomrecentproject2" class="bottomrecentproject-container">
+                    <h3>Node.js and SQL Test</h3>
+                    <div id="img8" class="imgb"><img source src="others/database-1.png" width="auto" height="400" class="imgb"></div>
+                      <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: Node.js | Solo Project | Programmer</h4>
+                      <ul>
+                        <li>Created simple website to test and run Node.js and connect with SQL database to perform CRUD operations.</li>
+                        <li>Learned how to use Postman to test API fetching.</li>
+                      </ul>
+                </div>
+                <div class="bottomsubprojectbuttonholder">
+                  <button onclick="changeElement(this)" class="recentpage-button active" data-target="bottomrecentproject1"data-panel-class="bottomrecentproject-container"data-button-class="recentpage-button2">1</button>
+                  <button onclick="changeElement(this)" class="recentpage-button" data-target="bottomrecentproject2"data-panel-class="bottomrecentproject-container"data-button-class="recentpage-button2">2</button>
+                </div>
+                </div>
+              </div>
+            <div class="subProject subpage inactive" id="subpage2">
               <h2>
-                Past Projects
+                Small Projects / Other
               </h2>
-              <div class="rightTopContainer">
-              <div id="recentproject1" class="recentproject-container active">
-                  <h3>Aether Wizard Life by Vonder Games Studio</h3>
-                  <a href="https://vondergames.com/" target="_blank">Website</a>
-                  <video class="vids" autoplay="autoplay" controls muted><source src="videos/aether.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Internship | Game Programmer</h4>
-                    <ul>
-                      <li>Contributed in the Aether Wizard Life Project as Unity game developer intern at Vonder Games Studio.</li>
-                      <li>Learned additional Unity Tools such as Debugging, Unity Input System, Unitask, DoTween, Cinemachine, Timeline, and Spine Animation.</li>
-                      <li>Learned in the company environment under senior developer. Added and fixed more than 100 features in the game improving release stability.</li>
-                    </ul>
-              </div>
-              <div id="recentproject2" class="recentproject-container">
-                  <h3>Master Mind</h3>
-                  <a href="https://github.com/PanithiRunggeratigul/Master-Mind" target="_blank">GitHub</a>
-                  <video class="vids" autoplay="autoplay" controls muted><source src="videos/mastermind.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Single Project | Game Programmer</h4>
-                    <ul>
-                      <li>Created basic game with UI. Player need to guess the numbers and the positions.</li>
-                      <li>Optimized the game using Unity Event System.</li>
-                    </ul>
-              </div>
-              <div id="recentproject3" class="recentproject-container">
-                  <h3>Slide Puzzle</h3>
-                  <a href="https://github.com/PanithiRunggeratigul/Slide-Puzzle" target="_blank">GitHub</a>
+              <div class="content-group">
+              <div id="smallproject1" class="smallproject-container active">
+                  <h3>Jumping Game p5.js</h3>
+                  <a href="https://github.com/PanithiRunggeratigul/Jumping-Game-p5.js" target="_blank">GitHub</a>
                   <video class="vids" autoplay="autoplay" controls muted>
-                    <source src="videos/slide puzzle.mp4" type="video/mp4">
+                    <source src="videos/play_test.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Single Project | Game Programmer</h4>
-                    <ul>
-                      <li>Created 3D slide puzzle game.</li>
-                      <li>Learned about Responsive UI, Design Pattern and Principle. Organized the code by applying SOLID Principle and Observer Pattern for better readability.</li>
-                    </ul>
+                      <h4 style="padding-left: 10px;">p5.js Project | Language: JavaScript | Tools: p5.js | Group Project | Programmer</h4>
+                      <ul>
+                        <li>Created rip-off Google's dinosaur game with p5.js</li>
+                        <li>Applied differnt game logics from Unity projects to this game, ex. jumping and collision.</li>
+                      </ul>
               </div>
-              <div class="subprojectbuttonholder">
-                <button onclick="changeSubProject('recentproject1', this)" class="recentpage-button recentpagebutton-1 active-recentpagebtn">1</button>
-                <button onclick="changeSubProject('recentproject2', this)" class="recentpage-button recentpagebutton-2 inactive-recentpagebtn">2</button>
-                <button onclick="changeSubProject('recentproject3', this)" class="recentpage-button recentpagebutton-3 inactive-recentpagebtn">3</button>
+              <div id="smallproject2" class="smallproject-container">
+                  <h3>Flappy Bird Meta Spark Game</h3>
+                  <video class="vids" autoplay="autoplay" controls muted>
+                    <source src="videos/Flappy Bird.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                      <h4 style="padding-left: 10px;">Meta Spark Project | Tools: Meta Spark | Solo Project | Programmer</h4>
+                      <ul>
+                        <li>Created a game/filter with Meta Spark Studio and learned about AR by following tutorial: <a href="https://www.youtube.com/watch?v=wvjGxsBsP-c&ab_channel=DJSCREATES" target="_blank">Video Tutorial.</a></li>
+                        <li>Used visual programming on how to manage the output without scripting.</li>
+                      </ul>
               </div>
-              </div>
-              <div class="rightBottomContainer">
-              <div id="bottomrecentproject1" class="bottomrecentproject-container active">
-                  <h3>Web Programming: API Food Searching</h3>
-                  <div id="img7" class="imgb"><img source src="others/img7.png" width="auto" height="400" class="imgb"></div>
-                    <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: Node.js | Single Project | Programmer</h4>
-                    <ul>
-                      <li>Studied how to request and fetch data from Spoonacular API.</li>
-                      <li>Created a simple frontend and displayed the fetched data.</li>
-                    </ul>
-              </div>
-              <div id="bottomrecentproject2" class="bottomrecentproject-container">
-                  <h3>Node.js and SQL Test</h3>
-                  <div id="img8" class="imgb"><img source src="others/img8.png" width="auto" height="400" class="imgb"></div>
-                    <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: Node.js | Single Project | Programmer</h4>
-                    <ul>
-                      <li>Created simple website to test and run Node.js and connect with SQL database to perform CRUD operations.</li>
-                      <li>Learned how to use Postman to test API fetching.</li>
-                    </ul>
-              </div>
-              <div class="bottomsubprojectbuttonholder">
-                <button onclick="changeBottomSubProject('bottomrecentproject1', this)" class="bottomrecentpage-button bottomrecentpagebutton-1 active-bottomrecentpagebtn">1</button>
-                <button onclick="changeBottomSubProject('bottomrecentproject2', this)" class="bottomrecentpage-button bottomrecentpagebutton-2 inactive-bottomrecentpagebtn">2</button>
+              <div class="smallprojectbuttonholder">
+                <button onclick="changeElement(this)" class="recentpage-button active" data-target="smallproject1"data-panel-class="smallproject-container"data-button-class="recentpage-button3">1</button>
+                <button onclick="changeElement(this)" class="recentpage-button" data-target="smallproject2"data-panel-class="smallproject-container"data-button-class="recentpage-button3">2</button>
               </div>
               </div>
-            </div>
-          <div class="subProject subpage inactive" id="subpage2">
-            <h2>
-              Small Projects / Other
-            </h2>
-            <div id="smallproject1" class="smallproject-container active">
-                <h3>Jumping Game p5.js</h3>
-                <a href="https://github.com/PanithiRunggeratigul/Jumping-Game-p5.js" target="_blank">GitHub</a>
-                <video class="vids" autoplay="autoplay" controls muted>
-                  <source src="videos/play_test.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                    <h4 style="padding-left: 10px;">p5.js Project | Language: JavaScript | Tools: p5.js | Group Project | Programmer</h4>
-                    <ul>
-                      <li>Created rip-off Google's dinosaur game with p5.js</li>
-                      <li>Applied differnt game logics from Unity projects to this game, ex. jumping and collision.</li>
-                    </ul>
-            </div>
-            <div id="smallproject2" class="smallproject-container">
-                <h3>Flappy Bird Meta Spark Game</h3>
-                <video class="vids" autoplay="autoplay" controls muted>
-                  <source src="videos/Flappy Bird.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                    <h4 style="padding-left: 10px;">Meta Spark Project | Tools: Meta Spark | Single Project | Programmer</h4>
-                    <ul>
-                      <li>Created a game/filter with Meta Spark Studio and learned about AR by following tutorial: <a href="https://www.youtube.com/watch?v=wvjGxsBsP-c&ab_channel=DJSCREATES" target="_blank">Video Tutorial.</a></li>
-                      <li>Used visual programming on how to manage the output without scripting.</li>
-                    </ul>
-            </div>
-            <div class="smallprojectbuttonholder">
-              <button onclick="changeSmallProject('smallproject1', this)" class="smallrecentpage-button smallrecentpagebutton-1 active-smallrecentpagebtn">1</button>
-              <button onclick="changeSmallProject('smallproject2', this)" class="smallrecentpage-button smallrecentpagebutton-2 inactive-smallrecentpagebtn">2</button>
-            </div>
+              </div>
             </div>
           </div>
-
-          <script>
-            function showSubPage(pageId, button) {
-            document.querySelectorAll('.subpage').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
-
-            document.querySelectorAll('.subpage-button').forEach(btn => {
-                btn.classList.remove('active-subbtn');
-                btn.classList.add('inactive-subbtn');
-            });
-
-            button.classList.remove('inactive-subbtn');
-            button.classList.add('active-subbtn');
-        }
-
-        function changeTermImage(projId, button) {
-            document.querySelectorAll('.termprojectimage-container').forEach(recentProjectContainer => {
-              recentProjectContainer.classList.remove('active');
-            });
-
-            document.getElementById(projId).classList.add('active');
-
-            document.querySelectorAll('.recentimage-button').forEach(btn => {
-                btn.classList.remove('active-recentimagebutton');
-                btn.classList.add('inactive-recentimagebutton');
-            });
-
-            button.classList.remove('inactive-recentimagebutton');
-            button.classList.add('active-recentimagebutton');
-        }
-
-        function changeTermImage2(projId, button) {
-            document.querySelectorAll('.termprojectimage2-container').forEach(recentProjectContainer => {
-              recentProjectContainer.classList.remove('active');
-            });
-
-            document.getElementById(projId).classList.add('active');
-
-            document.querySelectorAll('.recentimage2-button').forEach(btn => {
-                btn.classList.remove('active-recentimage2button');
-                btn.classList.add('inactive-recentimage2button');
-            });
-
-            button.classList.remove('inactive-recentimage2button');
-            button.classList.add('active-recentimage2button');
-        }
-
-        function changeSubProject(projId, button) {
-            document.querySelectorAll('.recentproject-container').forEach(recentProjectContainer => {
-              recentProjectContainer.classList.remove('active');
-            });
-
-            document.getElementById(projId).classList.add('active');
-
-            document.querySelectorAll('.recentpage-button').forEach(btn => {
-                btn.classList.remove('active-recentpagebtn');
-                btn.classList.add('inactive-recentpagebtn');
-            });
-
-            button.classList.remove('inactive-recentpagebtn');
-            button.classList.add('active-recentpagebtn');
-        }
-
-        function changeBottomSubProject(projId, button) {
-            document.querySelectorAll('.bottomrecentproject-container').forEach(bottomRecentProjectContainer => {
-              bottomRecentProjectContainer.classList.remove('active');
-            });
-
-            document.getElementById(projId).classList.add('active');
-
-            document.querySelectorAll('.bottomrecentpage-button').forEach(btn => {
-                btn.classList.remove('active-bottomrecentpagebtn');
-                btn.classList.add('inactive-bottomrecentpagebtn');
-            });
-
-            button.classList.remove('inactive-bottomrecentpagebtn');
-            button.classList.add('active-bottomrecentpagebtn');
-        }
-
-        function changeSmallProject(projId, button) {
-            document.querySelectorAll('.smallproject-container').forEach(smallProjectContainer => {
-              smallProjectContainer.classList.remove('active');
-            });
-
-            document.getElementById(projId).classList.add('active');
-
-            document.querySelectorAll('.smallrecentpage-button').forEach(btn => {
-                btn.classList.remove('active-smallrecentpagebtn');
-                btn.classList.add('inactive-smallrecentpagebtn');
-            });
-
-            button.classList.remove('inactive-smallrecentpagebtn');
-            button.classList.add('active-smallrecentpagebtn');
-        }
-          </script>
         </section>
       </div>
   </body>
