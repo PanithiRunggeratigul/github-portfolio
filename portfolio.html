@@ -76,6 +76,23 @@
                       <li>Deployed the project to AWS Cloud and used GitHub for version control.</li>
                     </ul>
                 </div>
+                <br>
+                <div>
+                <h3>Online Chess Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/chess-project" target="_blank">GitHub</a>
+                    <div id="img11" class="termprojectimage2-container active"><img source src="others/img11.png" width="auto" height="400" class="project_img3"></div>
+                    <div id="img5" class="termprojectimage2-container"><img source src="others/img5.png" width="500" height="400" class="project_img3"></div>
+                    <div id="img9" class="termprojectimage2-container"><img source src="others/img9.png" width=50% height=auto style="margin: 10px;"></div>
+                  <div class="subprojectbuttonholder">
+                    <button onclick="changeTermImage2('img11', this)" class="recentimage2-button recentimage2button-1 active-recentimage2button">1</button>
+                    <button onclick="changeTermImage2('img5', this)" class="recentimage2-button recentimage2button-2 inactive-recentimage2button">2</button>
+                    <button onclick="changeTermImage2('img9', this)" class="recentimage2-button recentimage2button-3 inactive-recentimage2button">3</button>
+                  </div>
+                  <h4 style="padding-left: 10px;">Flutter Project | Language: Dart | Tools: Flutter, Firebase | Group Project | Programmer</h4>
+                    <ul>
+                      <li>Online Mobile Chess Game that used Figma to design and implemented using Dart and Flutter to create the game UI.</li>
+                      <li>Used Firebase to handle real-time online system, collecting player and match data.</li>
+                    </ul>
+                </div>
             </div>
               <div class="projectContent page" id="page2">       
                 <h2>
@@ -289,6 +306,22 @@
 
             button.classList.remove('inactive-recentimagebutton');
             button.classList.add('active-recentimagebutton');
+        }
+
+        function changeTermImage2(projId, button) {
+            document.querySelectorAll('.termprojectimage2-container').forEach(recentProjectContainer => {
+              recentProjectContainer.classList.remove('active');
+            });
+
+            document.getElementById(projId).classList.add('active');
+
+            document.querySelectorAll('.recentimage2-button').forEach(btn => {
+                btn.classList.remove('active-recentimage2button');
+                btn.classList.add('inactive-recentimage2button');
+            });
+
+            button.classList.remove('inactive-recentimage2button');
+            button.classList.add('active-recentimage2button');
         }
 
         function changeSubProject(projId, button) {
