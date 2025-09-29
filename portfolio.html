@@ -31,8 +31,28 @@
             <div class="leftContainer">
               <div class="projectContent page active" id="page1">
                 <h2>
-                  Term Projects
+                  Major Projects
                 </h2>
+                  <div class="content-group">
+                  <h3>Movie Search Web Service Project</h3> <a href="https://github.com/PanithiRunggeratigul/pds-test" target="_blank">GitHub</a>
+                      <div id="imdb-1" class="termprojectimage-container active"><img source src="others/imdb-1.png" width="auto" height="400" class="project_img2"></div>
+                      <div id="imdb-2" class="termprojectimage-container"><img source src="others/imdb-2.png" width="500" height="400" class="project_img2"></div>
+                      <div id="imdb-3" class="termprojectimage-container"><img source src="others/imdb-3.png" width="500" height="400" class="project_img2"></div>
+                    <div class="subprojectbuttonholder">
+                      <button onclick="changeElement(this)" class="content-button active" data-target="imdb-1"data-panel-class="termprojectimage-container"data-button-class="content-button2">1</button>
+                      <button onclick="changeElement(this)" class="content-button" data-target="imdb-2"data-panel-class="termprojectimage-container"data-button-class="content-button2">2</button>
+                      <button onclick="changeElement(this)" class="content-button" data-target="imdb-3"data-panel-class="termprojectimage-container"data-button-class="content-button2">3</button>
+                    </div>
+                    <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: React, Node.js, AWS | Group Project | Programmer</h4>
+                    <p style="padding-left: 10px;">Delivered a functional full-stack web app; <b>gained experience in API integration, database design, and frontend-backend communication.</b></p>
+                      <ul>
+                        <li>Built a web app that allows users to search, filter, and manage movie data.</li>
+                        <li>Implemented <b>RESTful APIs with Node.js and Express.</b></li>
+                        <li>Designed a <b>SQL database</b> for storing and retrieving user data.</li>
+                        <li>Developed a responsive frontend using <b>React and styled components.</b></li>
+                      </ul>
+                  </div>
+                <br>
                 <div class="content-group">
                   <h3>Escapee Game Project</h3> <a href="https://github.com/PanithiRunggeratigul/Multiplayer-Escapee-Scripts" target="_blank">GitHub</a> <a href="others/Escapee.zip" download>Download Game</a>
                     <div id="video1" class="video-container active">
@@ -51,32 +71,15 @@
                       <button onclick="changeElement(this)" class="content-button active" data-target="video1"data-panel-class="video-container"data-button-class="content-button1">1</button>
                       <button onclick="changeElement(this)" class="content-button" data-target="video2"data-panel-class="video-container"data-button-class="content-button1">2</button>
                     </div>
-                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Group Project | Game Programmer</h4>
+                    <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity, Photon Engine, Blender | Group Project | Lead Programmer</h4>
+                    <p style="padding-left: 10px;">Produced a functional 3D online multiplayer prototype; <b>learned network optimization and collaborative workflows in Unity.</b></p>
                       <ul>
-                        <li>3D Online game that player must run away from the bots until the time is out.</li>
-                        <li>The game server was run by <a href="https://www.photonengine.com/" target="_blank">Photon Engine</a>. I learned about master and client design while doing this project, and it allowed me to comprehend the 
-                          logic behind multiplayer environment while having limited resource to learn from.</li>
-                        <li>Developed in-game AI by using <a href="https://docs.unity3d.com/ScriptReference/AI.NavMesh.html" target="_blank">NavMesh</a>, that allow AI to see their path and players to capture.</li>
+                        <li>Designed and implemented core gameplay: players must survive against an AI bot until the timer expires, using terrain and items for strategy.</li>
+                        <li>Built and maintained the multiplayer networking system with <b><a href="https://www.photonengine.com/" target="_blank">Photon Engine</a></b>, ensuring smooth synchronization between clients and server.</li>
+                        <li>Developed in-game AI by using <b><a href="https://docs.unity3d.com/ScriptReference/AI.NavMesh.html" target="_blank">NavMesh</a></b>, that allow AI to see their path and players to capture.</li>
+                        <li>Coordinated with teammates as <b>lead programmer</b>, assigning tasks and ensuring project delivery.</li>
                       </ul>
                         </p>
-                  </div>
-                  <br>
-                  <div class="content-group">
-                  <h3>Movie Search Web Service Project</h3> <a href="https://github.com/PanithiRunggeratigul/pds-test" target="_blank">GitHub</a>
-                      <div id="imdb-1" class="termprojectimage-container active"><img source src="others/imdb-1.png" width="auto" height="400" class="project_img2"></div>
-                      <div id="imdb-2" class="termprojectimage-container"><img source src="others/imdb-2.png" width="500" height="400" class="project_img2"></div>
-                      <div id="imdb-3" class="termprojectimage-container"><img source src="others/imdb-3.png" width="500" height="400" class="project_img2"></div>
-                    <div class="subprojectbuttonholder">
-                      <button onclick="changeElement(this)" class="content-button active" data-target="imdb-1"data-panel-class="termprojectimage-container"data-button-class="content-button2">1</button>
-                      <button onclick="changeElement(this)" class="content-button" data-target="imdb-2"data-panel-class="termprojectimage-container"data-button-class="content-button2">2</button>
-                      <button onclick="changeElement(this)" class="content-button" data-target="imdb-3"data-panel-class="termprojectimage-container"data-button-class="content-button2">3</button>
-                    </div>
-                    <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: React, Node.js | Group Project | Programmer</h4>
-                      <ul>
-                        <li>Movie database web service using HTML/CSS and React for the frontend</li>
-                        <li>Displayed search result from IMDb API and SQL for user data authentication system using Node.js.</li>
-                        <li>Deployed the project to AWS Cloud and used GitHub for version control.</li>
-                      </ul>
                   </div>
                   <br>
                   <div class="content-group">
@@ -90,9 +93,10 @@
                       <button onclick="changeElement(this)" class="content-button"  data-target="chess-3"data-panel-class="termprojectimage2-container"data-button-class="content-button3">3</button>
                     </div>
                     <h4 style="padding-left: 10px;">Flutter Project | Language: Dart | Tools: Flutter, Firebase | Group Project | Programmer</h4>
+                    <p style="padding-left: 10px;">Delivered a functional online mobile chess game; <b>learned flutter framework and firebase management.</b></p>
                       <ul>
-                        <li>Online Mobile Chess Game that used Figma to design and implemented using Dart and Flutter to create the game UI.</li>
-                        <li>Used Firebase to handle real-time online system, collecting player and match data.</li>
+                        <li>Online Mobile Chess Game that used Figma to design and implemented using <b>Dart and Flutter</b> to create the game UI.</li>
+                        <li>Used <b>Firebase</b> to handle real-time online system, collecting player and match data.</li>
                       </ul>
                   </div>
               </div>
@@ -106,9 +110,11 @@
                       <img source src="others/sonkran-2.jpg" width="500" height="300" class="project_img">
                     </div>
                       <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Group Project | Game Programmer</h4>
+                      <p style="padding-left: 10px;">Delivered a polished 2D simulation game, gaining experience in team-based development and gameplay systems design.</b></p>
                       <ul>
-                        <li>2D drag and drop bartender simulation game created with Unity. Player must serve the right drink to customer before the time ran out and they must manage their temperature and dizzy by serve the drink to themselves.</li>
-                        <li>Delivered managing customer and player system as game programmer.</li>
+                        <li>2D drag and drop bartender simulation game.</li>
+                        <li>Implemented customer and player systems for drink orders, item interaction, and scoring.</li>
+                        <li>Collaborated with artists and designers to integrate assets and refine gameplay loop.</li>
                       </ul>
                 </div>
                 <div class="projectContent page" id="page3">       
@@ -123,9 +129,10 @@
                       </video>
                     </div>
                       <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Solo Project | Game Programmer, Animator</h4>
+                      <p style="padding-left: 10px;">Created demo 3D character controller with multiple states; learned <b>State Machine and Animator Override Controller.</b></p>
                       <ul>
-                        <li>Developed 3D third person view controller using State Machine to operate. Currently, it has idle, run, stop, and attack states.</li>
-                        <li>Studied and created a demo of character controller utilizing State Machine, Animator Override Controller, and Unity Input System.</li>
+                        <li>Developed 3D third person view controller using State Machine to operate. Currently developing idle, run, stop, and attack states.</li>
+                        <li>Studied and created a demo of character controller utilizing <b>State Machine, Animator Override Controller, and Unity Input System.</b></li>
                       </ul>
                 </div>
             </div>
@@ -150,10 +157,12 @@
                       Your browser does not support the video tag.
                     </video>
                       <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Internship | Game Programmer</h4>
+                      <p style="padding-left: 10px;">Gained hands-on industry experience, strengthening <b>debugging, system maintenance, and tool development skills.</b></p>
                       <ul>
-                        <li>Contributed in the Aether Wizard Life Project as Unity game developer intern at Vonder Games Studio.</li>
+                        <li>Developed and maintained gameplay systems, collaborating with designers and QA testers.</li>
                         <li>Learned additional Unity Tools such as Debugging, Unity Input System, Unitask, DoTween, Cinemachine, Timeline, and Spine Animation.</li>
-                        <li>Learned in the company environment under senior developer. Added and fixed more than 100 features in the game improving release stability.</li>
+                        <li><b>Debugged and fixed 100+ issues</b>, improving overall game stability.</li>
+                        <li>Contributed to project pipeline, ensuring smoother collaboration between developers and testers.</li>
                       </ul>
                 </div>
                 <div id="recentproject2" class="recentproject-container">
@@ -163,6 +172,7 @@
                       Your browser does not support the video tag.
                     </video>
                       <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Solo Project | Game Programmer</h4>
+                      <p style="padding-left: 10px;">Learned <b>Unity Event System and basic game optimization.</b></p>
                       <ul>
                         <li>Created basic game with UI. Player need to guess the numbers and the positions.</li>
                         <li>Optimized the game using Unity Event System.</li>
@@ -176,9 +186,10 @@
                       Your browser does not support the video tag.
                     </video>
                       <h4 style="padding-left: 10px;">Unity Project | Language: C# | Tools: Unity | Solo Project | Game Programmer</h4>
+                      <p style="padding-left: 10px;">Learned to utilize <b>Responsive UI, Design Pattern and Principle concepts.</b></p>
                       <ul>
                         <li>Created 3D slide puzzle game.</li>
-                        <li>Learned about Responsive UI, Design Pattern and Principle. Organized the code by applying SOLID Principle and Observer Pattern for better readability.</li>
+                        <li>Learned about Responsive UI, Design Pattern and Principle. Organized the code by applying SOLID Principle and Observer Pattern improving code readability.</li>
                       </ul>
                 </div>
                 <div class="subprojectbuttonholder">
@@ -192,8 +203,9 @@
                     <h3>Web Programming: API Food Searching</h3>
                     <div id="img7" class="imgb"><img source src="others/food-1.png" width="auto" height="400" class="imgb"></div>
                       <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: Node.js | Solo Project | Programmer</h4>
+                      <p style="padding-left: 10px;">Practiced <b>API consumption, React state management, and UI rendering.</b></p>
                       <ul>
-                        <li>Studied how to request and fetch data from Spoonacular API.</li>
+                        <li>Created a responsive web app that <b>fetches food data from a public API.</b></li>
                         <li>Created a simple frontend and displayed the fetched data.</li>
                       </ul>
                 </div>
@@ -201,9 +213,11 @@
                     <h3>Node.js and SQL Test</h3>
                     <div id="img8" class="imgb"><img source src="others/database-1.png" width="auto" height="400" class="imgb"></div>
                       <h4 style="padding-left: 10px;">Web Programming Project | Language: JavaScript | Tools: Node.js | Solo Project | Programmer</h4>
+                      <p style="padding-left: 10px;">Learned <b>database schema design and backend data handling.</b></p>
                       <ul>
-                        <li>Created simple website to test and run Node.js and connect with SQL database to perform CRUD operations.</li>
-                        <li>Learned how to use Postman to test API fetching.</li>
+                        <li>Created simple website to test and run <b>Node.js and connect with SQL database to perform CRUD operations.</b></li>
+                        <li>Learned Postman for API fetch testing.</li>
+                        <li>Designed a relational student record database with normalized tables.</li>
                       </ul>
                 </div>
                 <div class="bottomsubprojectbuttonholder">
@@ -225,9 +239,10 @@
                     Your browser does not support the video tag.
                   </video>
                       <h4 style="padding-left: 10px;">p5.js Project | Language: JavaScript | Tools: p5.js | Group Project | Programmer</h4>
+                      <p style="padding-left: 10px;">Delivered a playable, polished arcade game prototype; improved skills in <b>JavaScript game loops and asset creation.</b></p>
                       <ul>
-                        <li>Created rip-off Google's dinosaur game with p5.js</li>
-                        <li>Applied differnt game logics from Unity projects to this game, ex. jumping and collision.</li>
+                        <li>Recreated the classic dinosaur jumping game using <b>p5.js.</b></li>
+                        <li>Programmed core game logic: obstacle spawning, collision, and scoring.</li>
                       </ul>
               </div>
               <div id="smallproject2" class="smallproject-container">
@@ -237,9 +252,10 @@
                     Your browser does not support the video tag.
                   </video>
                       <h4 style="padding-left: 10px;">Meta Spark Project | Tools: Meta Spark | Solo Project | Programmer</h4>
+                      <p style="padding-left: 10px;">Delivered a lightweight AR game filter; <b>gained experience with visual programming and AR optimization.</b></p>
                       <ul>
-                        <li>Created a game/filter with Meta Spark Studio and learned about AR by following tutorial: <a href="https://www.youtube.com/watch?v=wvjGxsBsP-c&ab_channel=DJSCREATES" target="_blank">Video Tutorial.</a></li>
-                        <li>Used visual programming on how to manage the output without scripting.</li>
+                        <li>Built a Flappy Bird clone playable within social media AR filters by following tutorial: <a href="https://www.youtube.com/watch?v=wvjGxsBsP-c&ab_channel=DJSCREATES" target="_blank">Video Tutorial.</a></li>
+                        <li>Used visual scripting to handle input, physics, and scoring without custom code.</li>
                       </ul>
               </div>
               <div class="smallprojectbuttonholder">
